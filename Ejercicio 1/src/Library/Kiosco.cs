@@ -7,7 +7,7 @@ namespace Expert_SRP
         public Boolean PuedeComprar(Alfajor a, Double dinero, String moneda, Double unidadenpesos, Conversor c) 
         {
             Double pesos = c.ConvertirAPesos(dinero, moneda, unidadenpesos);
-            return pesos >= a.PrecioAlfajor(5, 10);
+            return pesos >= a.PrecioAlfajor(a.PrecioDulce,a.PrecioMasa);
         }
     }
 }

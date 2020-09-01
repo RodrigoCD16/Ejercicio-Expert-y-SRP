@@ -9,7 +9,7 @@ namespace Expert_SRP
             Alfajor a = new Alfajor(10, 8.5);
             Kiosco k = new Kiosco();
             Conversor c = new Conversor();
-            if (k.PuedeComprar(a, 15, "$", 43,c))
+            if (k.PuedeComprar(a, 25, "$", 43,c))
             {
                 Console.WriteLine("Felicitaciones! Tiene suficiente dinero para comprar un alfajor :)");
             }
