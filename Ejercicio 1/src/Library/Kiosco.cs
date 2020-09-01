@@ -4,25 +4,10 @@ namespace Expert_SRP
 {
     public class Kiosco 
     {
-        public Boolean PuedeComprar(Alfajor a, Double dinero, String moneda) 
+        public Boolean PuedeComprar(Alfajor a, Double dinero, String moneda, Double unidadenpesos, Conversor c) 
         {
-            Double pesos = ConvertirAPesos(dinero, moneda);
-            return pesos >= a.PrecioAlfajor
-        }
-        private Double ConvertirAPesos(Double dinero, String moneda) 
-        {
-            if (moneda.Equals("U$S")) 
-            {
-                return dinero / 30;
-            } 
-            else if (moneda.Equals("$")) 
-            {
-                return dinero;
-            }
-            else 
-            {
-                return -1;
-            }
+            Double pesos = c.ConvertirAPesos(dinero, moneda, unidadenpesos);
+            return pesos >= a.PrecioAlfajor(5, 10);
         }
     }
 }

@@ -4,10 +4,16 @@ namespace Expert_SRP
 {
     public class Conversor
     {
-        private Double ConvertirAPesos(Double dinero, String moneda, Double unidadenpesos) 
+        public Double ConvertirAPesos(Double dinero, String moneda, Double unidadenpesos) 
         {
-            return dinero / unidadenpesos;
-        }
-            
+            if (moneda.Equals("$")) 
+            {
+                return dinero;
+            }
+            else
+            {
+                return dinero / unidadenpesos;
+            }
+        }         
     }
 }
