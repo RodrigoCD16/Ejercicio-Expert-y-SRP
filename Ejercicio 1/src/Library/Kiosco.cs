@@ -7,7 +7,7 @@ namespace Expert_SRP
         public Boolean PuedeComprar(Alfajor a, Double dinero, String moneda) 
         {
             Double pesos = ConvertirAPesos(dinero, moneda);
-            return pesos >= a.PrecioDulce + a.PrecioMasa;
+            return pesos >= a.PrecioDulce + a.PrecioMasa; //No se aplica correctamente el expert, esta operación tendría que estar dentro de la clase Alfajor ya que esta es la experta que posee todos los datos
         }
         private Double ConvertirAPesos(Double dinero, String moneda) //se tendría que separar convertir a pesos en una clase a parte que permita hacer la conversión entre cualquier tipo de moneda
         {
