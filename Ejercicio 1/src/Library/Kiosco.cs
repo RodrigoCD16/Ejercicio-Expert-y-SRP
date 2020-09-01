@@ -9,7 +9,7 @@ namespace Expert_SRP
             Double pesos = ConvertirAPesos(dinero, moneda);
             return pesos >= a.PrecioDulce + a.PrecioMasa;
         }
-        private Double ConvertirAPesos(Double dinero, String moneda) //se tendría que separar convertir a pesos en una clase a parte
+        private Double ConvertirAPesos(Double dinero, String moneda) //se tendría que separar convertirAPesos en una clase a parte
         {
             if (moneda.Equals("U$S")) 
             {
