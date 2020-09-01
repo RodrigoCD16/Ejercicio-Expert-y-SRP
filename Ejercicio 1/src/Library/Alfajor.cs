@@ -11,5 +11,8 @@ namespace Expert_SRP
         }
         public Double PrecioDulce {get;set;}
         public Double PrecioMasa {get; set;}
+
+        public Double PrecioAlfajor = PrecioDulce + PrecioMasa;
+            
     }
 }
